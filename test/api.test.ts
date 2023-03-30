@@ -84,7 +84,6 @@ describe('Testing graphql api', () => {
   // test post cat data
   let catID1: string;
   it('should post all cat data', async () => {
-    console.log(catData1);
     const cat = await postCat(app, catData1);
     catID1 = cat.id!;
   });
@@ -96,6 +95,7 @@ describe('Testing graphql api', () => {
 
   // test get single cat
   it('should return single cat', async () => {
+    console.log('USER ID', user.id!);
     await getSingleCat(app, catID1);
   });
 
